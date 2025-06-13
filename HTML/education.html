@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS (GitHub-compatible path) -->
+  <!-- One-page CSS -->
   <link rel="stylesheet" href="/IT223-WST-Portfolio/CSS/education.css">
 </head>
 <body>
@@ -21,12 +21,6 @@
       <span class="logo-text">My Education</span>
     </div>
 
-    <button class="hamburger" aria-label="Toggle navigation">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
     <nav class="nav-links">
       <a href="/IT223-WST-Portfolio/index.html">OVERVIEW</a>
       <a href="/IT223-WST-Portfolio/HTML/skills-hobbies.html">SKILLS</a>
@@ -35,8 +29,9 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main Content (one-screen layout) -->
   <div class="profile-section">
+    <!-- Left Side: Image & Info -->
     <div class="profile-image">
       <img src="/IT223-WST-Portfolio/IMAGES/educationl-profile.jpg" alt="Jan Michael B. Torejas" class="profile-pic" />
       <h1 class="name-below">Jan Michael B. Torejas</h1>
@@ -44,21 +39,21 @@
       <h5>Contact: 09075125259</h5>
     </div>
 
+    <!-- Right Side: Text Info -->
     <div class="my-text">
-      <h2>Education & Personal Details</h2><br>
+      <h2>Education & Bio</h2>
+
       <div class="section-box">
-        <h3>Bio</h3>
-        <p><strong>Name:</strong> Jan Michael B. Torejas</p>
         <p><strong>Age:</strong> 33</p>
         <p><strong>Birthday:</strong> Jan 25, 1992</p>
         <p><strong>Gender:</strong> Male</p>
         <p><strong>Religion:</strong> Roman Catholic</p>
-        <p><strong>Citizenship:</strong> Filipino</p><br>
+        <p><strong>Citizenship:</strong> Filipino</p>
 
-        <h3>Educational Background</h3>
+        <br><h3>Education</h3>
         <p><strong>Elementary:</strong> Central Elementary School (2003–2004)</p>
         <p><strong>Senior High:</strong> Andress Soriano College (2007–2008)</p>
-        <p><strong>Diploma:</strong> IT Diploma (Graduated) (2023–2024)</p>
+        <p><strong>Diploma:</strong> IT Diploma (2023–2024)</p>
         <p><strong>College:</strong> De La Salle John Bosco College, BSIT (Present)</p>
       </div>
     </div>
@@ -73,17 +68,6 @@
     <a href="https://your-awardspace-link.com" target="_blank" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
     <a href="mailto:janmichaeltorejas31@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
   </footer>
-
-  <!-- JS: Hamburger Toggle -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('open');
-    });
-  </script>
 
 </body>
 </html>
