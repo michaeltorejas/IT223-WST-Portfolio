@@ -7,17 +7,17 @@
 
 html, body {
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
   font-family: 'Segoe UI', sans-serif;
-  background: url('/IT223-WST-Portfolio/IMAGES/bacground.png') center/cover no-repeat;
+  background: url('/IT223-WST-Portfolio/IMAGES/bacground.png') center/cover no-repeat fixed;
   color: #fff;
+  overflow: hidden;
   text-align: center;
 }
 
 /* === Header === */
 header {
   height: 12vh;
-  background-color: #252525cc;
+  background-color: rgba(37, 37, 37, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,105 +32,119 @@ header {
 }
 
 .logo img {
-  height: 40px;
+  height: 45px;
 }
 
 .logo-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #fef200;
   font-family: 'Great Vibes', cursive;
+  letter-spacing: 2px;
 }
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-links a {
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #f67c01;
 }
 
-/* === Layout === */
+/* === Main Content === */
 .profile-section {
-  height: 78vh; /* Remaining space */
+  height: 78vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 20px;
-  gap: 300px;
+  justify-content: center;
+  gap: 60px;
+  padding: 0 40px;
 }
 
 .profile-image {
-  flex-shrink: 0;
   text-align: center;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #058d33;
-  box-shadow: 0 0 10px white;
+  border: 4px solid #00cc66;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
 }
 
 .name-below {
-  margin-top: 10px;
-  color: #4ae601;
+  margin-top: 12px;
+  font-size: 1.1rem;
   font-weight: bold;
-  font-size: 1rem;
+  color: #4ae601;
   text-shadow: 1px 1px 4px black;
 }
 
 h4, h5 {
-  font-size: 0.7rem;
-  color: #ccc;
+  font-size: 0.75rem;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 3px black;
 }
 
-/* === Info Section === */
+/* === Bio & Education Section === */
 .my-text {
-  font-size: 0.8rem;
-  max-width: 50%;
   text-align: left;
-  color: #fff;
+  font-size: 0.9rem;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
 }
 
 .my-text h2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: cyan;
   margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
 }
 
 .section-box p {
-  font-size: 0.75rem;
-  margin-bottom: 5px;
+  margin: 8px 0;
+  line-height: 1.4;
+  color: #eee;
 }
 
 .section-box strong {
   color: #00cc66;
+  font-weight: bold;
 }
 
 /* === Footer === */
 .footer {
   height: 10vh;
+  background: rgba(0, 0, 0, 0.25);
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
-  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  gap: 20px;
 }
 
 .footer a {
-  color: #fff;
   font-size: 1.2rem;
-  transition: transform 0.3s;
+  color: white;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .footer a:hover {
@@ -138,17 +152,35 @@ h4, h5 {
   color: #f67c01;
 }
 
-/* === Mobile (1-column layout) === */
+/* === Mobile === */
 @media (max-width: 768px) {
+  html, body {
+    overflow-y: auto;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
   .profile-section {
     flex-direction: column;
     height: auto;
-    padding: 10px;
-    overflow-y: auto;
+    padding: 20px;
+    gap: 20px;
   }
 
   .my-text {
-    max-width: 90%;
+    max-width: 100%;
     text-align: center;
   }
 
@@ -157,7 +189,9 @@ h4, h5 {
     height: 120px;
   }
 
-  html, body {
-    overflow-y: auto; /* Allow scroll on small screens */
+  .footer {
+    flex-wrap: wrap;
+    padding: 10px;
+    height: auto;
   }
 }
