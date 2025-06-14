@@ -1,4 +1,4 @@
-/* === Reset === */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -7,101 +7,74 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background-color: #f5f7fa;
+  background: #f8f9fa;
   color: #333;
+  line-height: 1.6;
 }
 
-/* === Layout === */
 .container {
-  width: 90%;
-  max-width: 1100px;
+  max-width: 900px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
-header {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 40px 0;
-}
-
-header h1 {
-  margin-bottom: 10px;
-}
-
-nav {
-  background: #34495e;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  padding: 15px 20px;
-  display: block;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-nav a:hover {
-  background: #2c3e50;
-}
-
-section {
-  padding: 30px 0;
+/* Typography */
+h1 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 5px;
 }
 
 h2 {
-  margin-bottom: 15px;
-  color: #2c3e50;
+  margin-top: 30px;
+  color: #3949ab;
+  border-bottom: 2px solid #c5cae9;
+  padding-bottom: 5px;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
+h3 {
+  color: #3f51b5;
+  margin-top: 15px;
+}
+
+p, div {
+  margin: 10px 0;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Grid for personal info */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-.skills li {
-  background: #ecf0f1;
-  padding: 10px 15px;
-  border-radius: 8px;
-  list-style: none;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
-}
-
-.card {
-  background: white;
-  padding: 20px;
+.education p {
   margin-bottom: 20px;
-  border-left: 5px solid #3498db;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-footer {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9em;
-}
-
-/* === Responsive === */
+/* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    text-align: center;
+  h1 {
+    font-size: 1.5rem;
   }
 
-  .skills {
-    flex-direction: column;
-    align-items: flex-start;
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 15px;
   }
 }
