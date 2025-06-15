@@ -132,6 +132,7 @@ header {
 
 .profile-image {
   flex-shrink: 0;
+  margin-left: 30px;
 }
 
 .profile-pic {
