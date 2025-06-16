@@ -278,6 +278,7 @@ h2 {
   }
 
   .profile-section {
+    align-content: center;
     flex-direction: column-reverse;
     text-align: center;
     padding: 20px;
